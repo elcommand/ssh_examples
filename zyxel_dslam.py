@@ -6,7 +6,7 @@ import time
 ssh = paramiko.SSHClient()
 ssh.load_system_host_keys()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect('10.10.5.6', username='admin', password='******')
+ssh.connect('10.10.5.6', username='admin', password='********')
 
 chan = ssh.invoke_shell()
 chan.sendall('show mac address-table port 1-24'+"\r\n")
